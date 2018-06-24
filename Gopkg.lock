@@ -2,6 +2,12 @@
 
 
 [[projects]]
+  name = "github.com/Sirupsen/logrus"
+  packages = ["."]
+  revision = "418b41d23a1bf978c06faea5313ba194650ac088"
+  version = "v0.8.7"
+
+[[projects]]
   name = "github.com/gorilla/context"
   packages = ["."]
   revision = "08b5f424b9271eedf6f9f0ce86cb9396ed337a42"
@@ -16,6 +22,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "710acbeff1e035c63e93b534fee8114af6b54616b1b0f926f0da85a0fceea502"
+  inputs-digest = "1e49e31c5d0192c1cc6ca154fdb7f08b0c81a3dc2a0a4b66780a6541ccd20af9"
   solver-name = "gps-cdcl"
   solver-version = 1
