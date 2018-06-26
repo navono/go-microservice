@@ -7,7 +7,6 @@ import (
 	"strconv"
 
 	"github.com/boltdb/bolt"
-
 	"github.com/navono/go-microservice/accountservice/model"
 )
 
@@ -60,6 +59,7 @@ func (bc *BoltClient) QueryAccount(accountID string) (model.Account, error) {
 		// Return nil to indicate nothing went wrong, e.g no error
 		return nil
 	})
+
 	// If there were an error, return the error
 	if err != nil {
 		return model.Account{}, err
