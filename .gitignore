@@ -2,3 +2,4 @@ vendor
 debug
 *.exe
 *.db
+accountservice-linux-amd64
