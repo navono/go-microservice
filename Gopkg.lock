@@ -2,32 +2,44 @@
 
 
 [[projects]]
+  digest = "1:36a75ab002c1cfb43bcc5d2ec10fbdc2a1136e9246a65e535f1d827435f28f17"
   name = "github.com/Sirupsen/logrus"
   packages = ["."]
+  pruneopts = "UT"
   revision = "418b41d23a1bf978c06faea5313ba194650ac088"
   version = "v0.8.7"
 
 [[projects]]
+  digest = "1:5d5fd4a531c228094c23afef9608d26c3df0e5447aacbec450547794d09df58a"
   name = "github.com/boltdb/bolt"
   packages = ["."]
+  pruneopts = "UT"
   revision = "aa66506030b376f848667d84d2596faa8a7099ea"
   version = "v1.0"
 
 [[projects]]
+  digest = "1:c79fb010be38a59d657c48c6ba1d003a8aa651fa56b579d959d74573b7dff8e1"
   name = "github.com/gorilla/context"
   packages = ["."]
+  pruneopts = "UT"
   revision = "08b5f424b9271eedf6f9f0ce86cb9396ed337a42"
   version = "v1.1.1"
 
 [[projects]]
+  digest = "1:e73f5b0152105f18bc131fba127d9949305c8693f8a762588a82a48f61756f5f"
   name = "github.com/gorilla/mux"
   packages = ["."]
+  pruneopts = "UT"
   revision = "e3702bed27f0d39777b0b37b664b6280e8ef8fbf"
   version = "v1.6.2"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "f3083957a108b526b550f9e83707070e32d67d9cc64d789d2b0288b3ecbaec76"
+  input-imports = [
+    "github.com/Sirupsen/logrus",
+    "github.com/boltdb/bolt",
+    "github.com/gorilla/mux",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
