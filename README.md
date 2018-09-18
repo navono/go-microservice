@@ -15,3 +15,6 @@ or run single package tests:
 > goconvey.exe
 
 在浏览器打开监听的`url`即可查看当前的所有测试的运行状况。
+
+# docker
+Note about proxy in docker build process.
