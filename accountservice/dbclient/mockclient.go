@@ -29,3 +29,9 @@ func (m *MockBoltClient) OpenBoltDb() {
 func (m *MockBoltClient) Seed() {
 	// Does nothing
 }
+
+// Check mock for interface method
+func (m *MockBoltClient) Check() bool {
+	args := m.Mock.Called()
+	return args.Get(0).(bool)
+}

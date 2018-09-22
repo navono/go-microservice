@@ -17,9 +17,15 @@ type Routes []Route
 
 var routes = Routes{
 	Route{
-		"GetAccount", // Name
-		"GET",        // HTTP method
+		"GetAccount",            // Name
+		"GET",                   // HTTP method
 		"/accounts/{accountID}", // Route pattern
 		GetAccount,
+	},
+	Route{
+		"HealthCheck",
+		"GET",
+		"/health",
+		HealthCheck,
 	},
 }

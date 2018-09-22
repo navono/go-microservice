@@ -15,6 +15,7 @@ type IBoltClient interface {
 	OpenBoltDb()
 	QueryAccount(accountID string) (model.Account, error)
 	Seed()
+	Check() bool
 }
 
 // BoltClient IBoltClient Real implementation
@@ -35,6 +36,11 @@ func (bc *BoltClient) OpenBoltDb() {
 func (bc *BoltClient) Seed() {
 	bc.initializeBucket()
 	bc.seedAccounts()
+}
+
+// Naive healthcheck
+func (bc *BoltClient) Check() bool {
+	return bc.boltDB != nil
 }
 
 // QueryAccount ...
