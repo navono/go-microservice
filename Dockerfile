@@ -23,8 +23,8 @@
 # ENTRYPOINT ["./app"]
 
 
-FROM iron/base
-# FROM scratch
+# FROM iron/base
+FROM scratch
 
 EXPOSE 8989
 ADD ./bin/account /
