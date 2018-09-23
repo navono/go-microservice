@@ -24,7 +24,7 @@ or run single package tests:
 # docker
 Note about proxy in docker build process.
 
-# consul
+## consul
 > docker run -d --name=consul-agent -p 8500:8500 -p 8600:8600 consul agent -dev -client="0.0.0.0"
 
 ## node (HTTP)
@@ -32,3 +32,17 @@ Note about proxy in docker build process.
 
 ## service (HTTP)
 > http://localhost:8500/v1/catalog/service/account
+
+## docker-compose
+### use swarm
+> docker swarm init --advertise-addr=x.x.x.x
+<br>
+> docker stack deploy -c docker-compose.yml myaccount
+
+Check docker containers:
+> docker ps -a
+
+### exit swarm
+> docker stack rm myaccount
+<br>
+> docker swarm leave --force
