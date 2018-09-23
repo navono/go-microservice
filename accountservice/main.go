@@ -12,7 +12,9 @@ var appName = "accountservice"
 func main() {
 	fmt.Printf("Starting %v\n", appName)
 	initializeBoltClient()
-	service.StartWebServer("8989")
+	s, _ := service.New(8989)
+	s.Start()
+	// service.StartWebServer("8989")
 }
 
 // Creates instance and calls the OpenBoltDb and Seed funcs

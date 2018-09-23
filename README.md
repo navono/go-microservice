@@ -23,3 +23,12 @@ or run single package tests:
 
 # docker
 Note about proxy in docker build process.
+
+# consul
+> docker run -d --name=consul-agent -p 8500:8500 -p 8600:8600 consul agent -dev -client="0.0.0.0"
+
+## node (HTTP)
+> http://localhost:8500/v1/catalog/nodes
+
+## service (HTTP)
+> http://localhost:8500/v1/catalog/service/account
